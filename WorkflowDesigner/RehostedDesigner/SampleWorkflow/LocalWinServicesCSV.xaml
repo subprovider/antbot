@@ -1,0 +1,83 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ktds.AntBot.Studio.Workflow" this:Workflow.Status="running"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation"
+ xmlns:this="clr-namespace:ktds.AntBot.Studio"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Status" Type="InArgument(x:String)" />
+    <x:Property Name="ServicesCSV" Type="OutArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ktds.AntBot.Studio.Workflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sma:PSDataCollection(sma:PSObject)" Name="Services" />
+    </Sequence.Variables>
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[ServicesCSV]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["Service,Status" + Environment.NewLine]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ForEach x:TypeArguments="sma:PSObject" DisplayName="ForEach&lt;PSObject&gt;" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Services]">
+      <ActivityAction x:TypeArguments="sma:PSObject">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="sma:PSObject" Name="svc" />
+        </ActivityAction.Argument>
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[ServicesCSV]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[ServicesCSV + svc.ToString() + "," + Status + Environment.NewLine]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </ActivityAction>
+    </ForEach>
+    <mpua:OutFile DisplayName="Out-File" FilePath="services.txt" sap2010:WorkflowViewState.IdRef="OutFile_1" InputObject="[ServicesCSV]" xmlns:mpa="clr-namespace:Microsoft.PowerShell.Activities;assembly=Microsoft.PowerShell.Activities" xmlns:mpma="clr-namespace:Microsoft.PowerShell.Management.Activities;assembly=Microsoft.PowerShell.Management.Activities" xmlns:mpua="clr-namespace:Microsoft.PowerShell.Utility.Activities;assembly=Microsoft.PowerShell.Utility.Activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:this="clr-namespace:ktds.AntBot.Studio" />
+    <mpma:StartProcess DisplayName="Start-Process" FilePath="services.txt" sap2010:WorkflowViewState.IdRef="StartProcess_1" xmlns:mpa="clr-namespace:Microsoft.PowerShell.Activities;assembly=Microsoft.PowerShell.Activities" xmlns:mpma="clr-namespace:Microsoft.PowerShell.Management.Activities;assembly=Microsoft.PowerShell.Management.Activities" xmlns:mpua="clr-namespace:Microsoft.PowerShell.Utility.Activities;assembly=Microsoft.PowerShell.Utility.Activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" />
+    <sads:DebugSymbol.Symbol>d1hEOlxDU2hhcnBcVUJvdFxXb3JrZmxvd0Rlc2lnbmVyXFJlaG9zdGVkRGVzaWduZXJcU2FtcGxlV29ya2Zsb3dcTG9jYWxXaW5TZXJ2aWNlc0NTVi54YW1sCSMDQQ4CAQEnBS4OAgEKLwU9DwIBBCwwLFgCAQ0pMSk+AgELL4gBL5QBAgEJNAk7EgIBBTk0OXcCAQg2NTZCAgEG</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="287,60" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="ForEach`1_3" sap:VirtualizedContainerService.HintSize="287,208" />
+      <sap2010:ViewStateData Id="OutFile_1" sap:VirtualizedContainerService.HintSize="508,22" />
+      <sap2010:ViewStateData Id="StartProcess_1" sap:VirtualizedContainerService.HintSize="508,22" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="309,552">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ktds.AntBot.Studio.Workflow_1" sap:VirtualizedContainerService.HintSize="349,632" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

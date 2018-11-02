@@ -1,0 +1,3 @@
+obj\Debug\_MaxmizeWindowActivityLib.g.cs
+obj\Debug\Activity1.g.cs
+obj\Debug\MaxmizeWindowActivityLib_Activity1_BeforeInitializeComponentHelper.cs

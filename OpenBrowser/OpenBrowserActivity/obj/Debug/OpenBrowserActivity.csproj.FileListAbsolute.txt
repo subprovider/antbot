@@ -1,0 +1,16 @@
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\bin\Debug\OpenBrowserActivity.dll
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\bin\Debug\OpenBrowserActivity.pdb
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\Interop.SHDocVw.dll
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.csproj.ResolveComReference.cache
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.csproj.CoreCompileInputs.cache
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.dll
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.pdb
+D:\CSharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.csprojAssemblyReference.cache
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\bin\Debug\OpenBrowserActivity.dll
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\bin\Debug\OpenBrowserActivity.pdb
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.csprojAssemblyReference.cache
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\Interop.SHDocVw.dll
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.csproj.ResolveComReference.cache
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.csproj.CoreCompileInputs.cache
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.dll
+C:\csharp\UBot\OpenBrowser\OpenBrowserActivity\obj\Debug\OpenBrowserActivity.pdb

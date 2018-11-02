@@ -1,0 +1,3 @@
+obj\Debug\_MouseClickActivity.g.cs
+obj\Debug\Activity1.g.cs
+obj\Debug\MouseClickActivity_Activity1_BeforeInitializeComponentHelper.cs

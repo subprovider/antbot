@@ -1,0 +1,114 @@
+﻿<sap:ActivityDesigner x:Class="ktds.Ant.Activities.ImageDetectorActivityDesign"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+                       xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+
+    <!-- Icon 설정 -->
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing>
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16" ></Rect>
+                    </ImageDrawing.Rect>
+                    <ImageDrawing.ImageSource>
+                        <BitmapImage UriSource="camera.png" ></BitmapImage>
+                    </ImageDrawing.ImageSource>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+    <!-- Icon 설정 end -->
+    
+    
+    
+    <sap:ActivityDesigner.Resources>
+         
+        <DataTemplate x:Key="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <!--ColumnDefinition/-->
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0"  Orientation="Horizontal">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                           <Button x:Name="btnCapture" Click="btnCaptureClick" Width="25" Height="25" HorizontalAlignment="Left"  VerticalAlignment="Top" >
+                               <Image Source="camera.png" Stretch="Fill" Width="18" Height="18" />
+                           </Button>
+                       </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Orientation="Horizontal">
+                            <Label Content=" " />
+                            <Label Content="Action" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <TextBox x:Name="ActionType" Text="{Binding Path=ModelItem.ActionType, Mode=TwoWay}" Width="90" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <Label Content=" " />
+                            <Label Content="X" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <TextBox x:Name="OffsetX"  Text="{Binding Path=ModelItem.OffsetX, Mode=TwoWay}" Width="40" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <Label Content=" " />
+                            <Label Content="Y" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                            <TextBox x:Name="OffsetY"   Text="{Binding Path=ModelItem.OffsetY, Mode=TwoWay}"  Width="40" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <Label Content=" " />
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center"  Orientation="Horizontal">
+                           <Button x:Name="btnDetail" Click="btnDetail_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Height="20" >
+                              <Image Source="detail.png" Stretch="Fill" />
+                           </Button>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5 5 5 5 " >
+                    <Border BorderThickness="1" BorderBrush="DarkOrange" >
+                        <Image x:Name="targetImage" HorizontalAlignment="Center" Source="{Binding Path=ModelItem.ImageFileName, Mode=TwoWay}" Margin ="5 5 5 5" />
+                    </Border>
+                        <Canvas x:Name="CanvasMain" Background="Transparent">
+                        <Border x:Name="RecodBorderSizeObject" BorderBrush="Red" BorderThickness="0" Canvas.Left="10" Canvas.Top="30" Width="20" Height="20">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"> + </TextBlock>
+                        </Border>
+                    </Canvas>
+                </StackPanel>
+                <!--Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1">Collapsed View</-->
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="Expanded">
+            <Grid>
+                <!--Label>hi</-->
+            </Grid>
+        </DataTemplate>
+
+        <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
+            <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="true">
+                    <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+ 
+    </sap:ActivityDesigner.Resources>
+    
+    <Grid>
+        <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}" />
+    </Grid>
+
+    
+
+</sap:ActivityDesigner>

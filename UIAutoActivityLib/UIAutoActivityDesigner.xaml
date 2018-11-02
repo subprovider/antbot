@@ -1,0 +1,85 @@
+﻿<sap:ActivityDesigner x:Class="ktds.Ant.Activities.UIAutoActivityDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:local="clr-namespace:ktds.Ant.Converter" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing>
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16" />
+                    </ImageDrawing.Rect>
+                    <ImageDrawing.ImageSource>
+                        <BitmapImage UriSource="c:\\test.bmp" />
+                    </ImageDrawing.ImageSource>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <sap:ActivityDesigner.Resources>
+        <!--local:ImageConverter x:Key="ImageConverter"/-->
+    </sap:ActivityDesigner.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0"  Orientation="Horizontal">
+                    <Button x:Name="btnCapture" Click="btnCapture_Click" Width="25" Height="25" HorizontalAlignment="Left"  VerticalAlignment="Top" >
+                        <Image Source="./Image/camera.png" Stretch="Fill" Width="18" Height="18" />
+                    </Button>
+                    <Label Content="Action" VerticalAlignment="Center" Padding="10 0 5 0"/>
+                    <TextBox x:Name="ActionType" Text="{Binding Path=ModelItem.MouseClickAction, Mode=TwoWay}" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </StackPanel>
+                
+                <!--StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5 5 5 5 " >
+                    <Border BorderThickness="1" BorderBrush="DarkOrange" >
+                        <Image x:Name="targetImage" HorizontalAlignment="Center" Source="{Binding Path=ModelItem.ImageFileName, Mode=TwoWay}" Margin ="5 5 5 5" />
+                    </Border>
+                </-->
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" >
+            <Border BorderThickness="1" BorderBrush="DarkOrange" >
+                <Image x:Name="Image" Source="{Binding Path = ModelItem.ImageFileName, Mode=TwoWay}" />
+            </Border>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="5 5 5 5">
+            <sap:WorkflowItemsPresenter Items="{Binding Path=ModelItem.Activities, Mode=TwoWay}" HintText="Insert Activities Here">
+                <sap:WorkflowItemsPresenter.SpacerTemplate>
+                    <DataTemplate>
+                        <Rectangle Fill="#FF1F6F6F" Width="10" Height="10" />
+                    </DataTemplate>
+                </sap:WorkflowItemsPresenter.SpacerTemplate>
+                <sap:WorkflowItemsPresenter.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </sap:WorkflowItemsPresenter.ItemsPanel>
+            </sap:WorkflowItemsPresenter>
+        </StackPanel>
+    </Grid>
+</sap:ActivityDesigner>

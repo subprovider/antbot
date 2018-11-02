@@ -1,0 +1,76 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ktds.AntBot.Studio.Workflow" sap2010:WorkflowViewState.IdRef="ktds.AntBot.Studio.Workflow_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:kaa="clr-namespace:ktds.Ant.Activities;assembly=OpenBrowserActivity"
+ xmlns:kaa1="clr-namespace:ktds.Ant.Activities;assembly=UIAutoActivityLib"
+ xmlns:kaa2="clr-namespace:ktds.Ant.Activities;assembly=KeyInActivityLib"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:IntPtr" Name="hIE" />
+    </Sequence.Variables>
+    <kaa:OpenBrowserActivity ResultHandle="{x:Null}" Text="{x:Null}" BrowserType="IE" ContinueOnError="No" sap2010:WorkflowViewState.IdRef="OpenBrowserActivity_1" URL="https://www.kt.com" WindowState="Maxmize" />
+    <kaa1:UIAutoActivity ResultBool="{x:Null}" Text="{x:Null}" ActionPattern="" AttrIsList="IsContentElement=True,IsControlElement=True,IsEnabled=True,IsKeyboardFocusable=False,IsOffscreen=False,IsPassword=False" AutomationId="" ControlName="로그인" ControlType="ControlType.Text" ControlTypeId="50020" sap2010:WorkflowViewState.IdRef="UIAutoActivity_1" ImageFileName="D:\CSharp\UBot\WorkflowDesigner\RehostedDesigner\bin\Debug\workimage\로그인.bmp" ImageName="로그인" ImageString="iVBORw0KGgoAAAANSUhEUgAAACUAAAAjCAYAAAATx8MeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHaSURBVFhH7ZQ9T8JAGMdZXF2ZTIybcXNjMn4FF5n9Bm4uDiYsjurupCG6sGCKRhsDmGglEtFQCRGiBpHwUqHKS3j5e8UiR23rqcE43PBL7q7PPc/vrnfnGNk6xH+DS7HCpVjhUqxwKVa4FCv/R8oXw8plDBOkrUuFMX95jzXZjhvM0El+gFNMYvNBgVQoYuciCif9/TiPx5aCJdLWpUSM+yW4BAsiReRQxbbQT7JwWybJraiiiDZOLnrxItz3NVTralfGJVxho9BAQ81iVs9nIvUF2gSDlD1pRGkp3wPinTr2giIVE8HOCxBPBN/7ZlK2K1fqROkXUlRBOm61BChP8qeYDyktIJWSBib9HE2KWoSX9DtNiKdUjFfGUb1NdkqvOXQpIYuUYWenritQ2zUcaGcqnMZBpQmlnIXbq8dYSVVfVfPf16WEdbFfxJZgHrnWM5Z7BXWc+zI8+m32nJ1/dfuMGM7ENxmNq2SFecwZv3lDmPaHMGoc1xi2lGVxqvDAuMZRFslaEYuk7egm+PQ2ZXBNpKKycVzC5K4ET8bs91pwl8BYr7CdFIWj+7wPvNz2rATDpomYYJYyGRwaQgoBs92kCMSkP5ZihEuxwqVY4VKscClWuBQbh3gDiNPJ9R4QPkMAAAAASUVORK5CYII=" MouseButton="Left" MouseClickAction="Click" PatternList="Dock=False,ExpandCollapse=False,GridItem=False,Grid=False,Invoke=True,ItemContainer=False,MultipleView=False,RangeValue=False,ScrollItem=False,Scroll=False,Selection=False,SelectionItem=False,SynchronizedInput=False,Table=False,TableItem=False,Text=False,Toggle=False,Transform=False,Value=True,VirtualizedItem=False,Window=False" ProcessName="iexplore" WindowHandle="[hIE]" WindowTitle="개인 | 글로벌 No.1 KT - Internet Explorer">
+      <kaa1:UIAutoActivity.Activities>
+        <scg:List x:TypeArguments="Activity" Capacity="0" />
+      </kaa1:UIAutoActivity.Activities>
+    </kaa1:UIAutoActivity>
+    <kaa1:UIAutoActivity ResultBool="{x:Null}" Text="{x:Null}" WindowHandle="{x:Null}" ActionPattern="" AttrIsList="IsContentElement=True,IsControlElement=True,IsEnabled=True,IsKeyboardFocusable=False,IsOffscreen=False,IsPassword=False" AutomationId="" ControlName="새창열림" ControlType="ControlType.Hyperlink" ControlTypeId="50005" sap2010:WorkflowViewState.IdRef="UIAutoActivity_2" ImageFileName="D:\CSharp\UBot\WorkflowDesigner\RehostedDesigner\bin\Debug\workimage\새창열림.bmp" ImageName="새창열림" ImageString="iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAYAAACBkybCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN7SURBVFhH3VhZSFVRFL1iKJINiKVZWv02UT99RyOlWWSTDWZKXw79lgVR2pcFUUQDqDmPaaESWKQUpdnwJMIGlCYsnEAzc3Z11u0+fLyOeu7zvgIXLHjct/fdZ92zz97nHA0WYnB4BFW27zid04Cw5GqsSqjA4tgynfzNZ/yPNrS1GpaI6e4dxIWyRqyIr8CCI7eVuDy+XPehr1WYspg7dV/1ry4bsArpy3dYAZfFDI+M4kSmTTpAV8h38Z1TgUtiGDT2cq10UFMh3zkVQS6JScpukA5mPM47XAK/A8U6/Q8VIyhabkcmZdmMKOZhWsxdkd+yQThzUUypPnBtUwa00Cx47cqDd0Q+Zu0twMKjpVIfOxnDFZgSw8qzUmGxBwn6HyzGjPAcJN6sx72XLXj+oQMvmjpxtfIdvHbkYr6YLZkvyRiuVDlTYlhKZcFl1DZk4GTmK8NzDB/beqBtzoT/BGJIxjILZTGDQyPKfWTO/iL47s5HS0ev4Q2MiIX9ubUH2dXN8BQzxnUk87WTsRjTDJTFsGvLgsrI9cGu75gqCTfqxWylT5hezmRMM1AWc0qxggULEdpGsejF12/v6je8gTXHK6EtvQhtWzZChA3XlczfkayaZqAsJjylRhrQkYFRJfARizvu2jOU1X5B/+Cw4Q08etOK7AdNOJPbAJ+IPAQozND25BrDWw3KYlTWS4AQo61LQ937dsPrbzx926bbqKQbY5qBshimhiygIynGY0sm0u43oW9gGKMOzXxAzNKv/iGkFL6Gx/p0qb8zGdMMLBVDMn3YY1YnVqDzx9iaOXalFn4ivYJFw1RJMdJtYlTLMrs7O76v6PRtXX2GNxB69iG0tdcxN7Jo0h2AnW5LMy5GWUAZfUSPYWnu6B6bmcjUx6JZ3pLaj0e3FQDV0kxaJcZtpdlM07RKTJXtm+GtBmUx3FosiyuXBnWmFWLcup0hVDea3qJqLXGqRNGXnuibT5m9jG7daBKqR4CZewoQElMGW3MnPrX+1LnzfA08t2ZJ7Z3JWXH7EYBQPZyR7PJ2BkbJbWR09YLDtBiCR1vZIOy0H4tn7ysUJ8s/pKCg6Mn7yz89NhPT6kKDYNBpcdXkCOa3SlEYj/T975eAjmDlSS1tVO5DJG3p40rVGg+WiLHDfnHOrU/YuWr9q7NEk/zNZ/xPvzg32RAnB/Ab5UEsDTAMnmoAAAAASUVORK5CYII=" MouseButton="Left" MouseClickAction="Click" PatternList="Dock=False,ExpandCollapse=False,GridItem=False,Grid=False,Invoke=True,ItemContainer=False,MultipleView=False,RangeValue=False,ScrollItem=False,Scroll=False,Selection=False,SelectionItem=False,SynchronizedInput=False,Table=False,TableItem=False,Text=False,Toggle=False,Transform=False,Value=True,VirtualizedItem=False,Window=False" ProcessName="iexplore" WindowTitle="로그인 | 글로벌 No.1 KT - Internet Explorer">
+      <kaa1:UIAutoActivity.Activities>
+        <scg:List x:TypeArguments="Activity" Capacity="0" />
+      </kaa1:UIAutoActivity.Activities>
+    </kaa1:UIAutoActivity>
+    <kaa1:UIAutoActivity ResultBool="{x:Null}" Text="{x:Null}" WindowHandle="{x:Null}" ActionPattern="" AttrIsList="IsContentElement=True,IsControlElement=True,IsEnabled=True,IsKeyboardFocusable=False,IsOffscreen=False,IsPassword=True" AutomationId="" ControlName="(none)" ControlType="ControlType.Edit" ControlTypeId="50004" sap2010:WorkflowViewState.IdRef="UIAutoActivity_3" ImageFileName="D:\CSharp\UBot\WorkflowDesigner\RehostedDesigner\bin\Debug\workimage\(none)(5).bmp" ImageName="(none)" ImageString="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAUCAYAAAC9Kc5pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVGhD7dJBDQAgEMAwrJx/kZDw4MsEtMkcbM3Mlkp3FvgxC5lZyMxCZhYys5CZhcwsZGYhMwuZWcjMQmYWMrOQmYXMLGRmITML2ZtF+jf7ALINFgWcoZGKAAAAAElFTkSuQmCC" MouseButton="Left" MouseClickAction="Click" PatternList="Dock=False,ExpandCollapse=False,GridItem=False,Grid=False,Invoke=False,ItemContainer=False,MultipleView=False,RangeValue=False,ScrollItem=False,Scroll=False,Selection=False,SelectionItem=False,SynchronizedInput=False,Table=False,TableItem=False,Text=False,Toggle=False,Transform=False,Value=True,VirtualizedItem=False,Window=False" ProcessName="iexplore" WindowTitle="https://www.facebook.com/?app_id=801956123305016&amp;signed_next=1&amp;next=https%3A%2F%2Fwww.facebook. - Internet Explorer">
+      <kaa1:UIAutoActivity.Activities>
+        <scg:List x:TypeArguments="Activity" Capacity="0" />
+      </kaa1:UIAutoActivity.Activities>
+    </kaa1:UIAutoActivity>
+    <kaa2:KeyInActivity ResultBool="{x:Null}" Text="{x:Null}" DelayMiliSec="0" sap2010:WorkflowViewState.IdRef="KeyInActivity_1" KeyInText="kcjin)120" />
+    <kaa1:UIAutoActivity ResultBool="{x:Null}" Text="{x:Null}" WindowHandle="{x:Null}" ActionPattern="" AttrIsList="IsContentElement=True,IsControlElement=True,IsEnabled=True,IsKeyboardFocusable=False,IsOffscreen=False,IsPassword=False" AutomationId="" ControlName="계속" ControlType="ControlType.Button" ControlTypeId="50000" sap2010:WorkflowViewState.IdRef="UIAutoActivity_4" ImageFileName="D:\CSharp\UBot\WorkflowDesigner\RehostedDesigner\bin\Debug\workimage\계속.bmp" ImageName="계속" ImageString="iVBORw0KGgoAAAANSUhEUgAAABoAAAATCAYAAACORR0GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVEhL7ZKxSsNQFIbzJE6uDiK6uHaIs0j6Bq6h2EAmX6BqS4bSLQ+g2E2c1JKKSMG1m6WkIkibpm1uaoz5vTdJK9HUIbeIgz98IXAO98u5J8JWvobf4F+Umb8h0h9B8wK91KFP+ta6TO0LqbMOoF1PqVEERVGQFVVVUSgUkMvl4o+isTo4SBPF5UwhhMA0TWiaBlEUoecf0I5rXyfjEs3S6z2Fk80Pjq+aZXbdQhAAvEynr5BlOTx44Y4C2rkM2M7S46BRoiK/e46iVMRZN4DvZ4eJNqVqgsREb947lgET2bY9x/d9PN9ffIpc9w5lqYKm68HlgInWdg5DNnYNtKgsIXJIJDKIB4cDJlrd3o9lp99F48ktTqioMZlizMFMFMlSRPaoiWOpjJuRC5sDJlpZ31sssoYGjqjoekhgcZAUsT1VEn+e0B9EoquBgz4HP4tq+AAvqNAgCOGRvwAAAABJRU5ErkJggg==" MouseButton="Left" MouseClickAction="Click" PatternList="Dock=False,ExpandCollapse=False,GridItem=False,Grid=False,Invoke=True,ItemContainer=False,MultipleView=False,RangeValue=False,ScrollItem=False,Scroll=False,Selection=False,SelectionItem=False,SynchronizedInput=False,Table=False,TableItem=False,Text=False,Toggle=False,Transform=False,Value=False,VirtualizedItem=False,Window=False" ProcessName="iexplore" WindowTitle="https://www.facebook.com/?app_id=801956123305016&amp;signed_next=1&amp;next=https%3A%2F%2Fwww.facebook. - Internet Explorer">
+      <kaa1:UIAutoActivity.Activities>
+        <scg:List x:TypeArguments="Activity" Capacity="0" />
+      </kaa1:UIAutoActivity.Activities>
+    </kaa1:UIAutoActivity>
+    <sads:DebugSymbol.Symbol>dx9EOlxDU2hhcnBcVUJvdFx0ZXN0XGt0c2hvcC54YW1sCB4DOQ4CAQEiBSLVAQIBCSMFJxsCAQYoBSwbAgEFLQUxGwIBBDIFMpoBAgEDMwU3GwIBAiOMDSOTDQIBBw==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="OpenBrowserActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="UIAutoActivity_1" sap:VirtualizedContainerService.HintSize="200,133" />
+      <sap2010:ViewStateData Id="UIAutoActivity_2" sap:VirtualizedContainerService.HintSize="200,128" />
+      <sap2010:ViewStateData Id="UIAutoActivity_3" sap:VirtualizedContainerService.HintSize="200,118" />
+      <sap2010:ViewStateData Id="KeyInActivity_1" sap:VirtualizedContainerService.HintSize="200,57" />
+      <sap2010:ViewStateData Id="UIAutoActivity_4" sap:VirtualizedContainerService.HintSize="200,117" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="222,899">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ktds.AntBot.Studio.Workflow_1" sap:VirtualizedContainerService.HintSize="262,979" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

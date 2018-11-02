@@ -1,0 +1,55 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ktds.AntBot.Studio.Workflow" sap2010:WorkflowViewState.IdRef="ktds.AntBot.Studio.Workflow_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:kaa="clr-namespace:ktds.Ant.Activities;assembly=OpenBrowserActivity"
+ xmlns:kaa1="clr-namespace:ktds.Ant.Activities;assembly=UIAutoActivityLib"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:IntPtr" Default="[IntPtr.Zero]" Name="hBrowser" />
+    </Sequence.Variables>
+    <kaa:OpenBrowserActivity Text="{x:Null}" BrowserType="IE" ContinueOnError="No" sap2010:WorkflowViewState.IdRef="OpenBrowserActivity_1" ResultHandle="[hBrowser]" URL="http://google.co.kr" WindowState="Maxmize" />
+    <kaa1:UIAutoActivity ResultBool="{x:Null}" Text="{x:Null}" ActionPattern="" AttrIsList="IsContentElement=True,IsControlElement=True,IsEnabled=True,IsKeyboardFocusable=False,IsOffscreen=False,IsPassword=False" AutomationId="" ControlName="I’m Feeling Lucky" ControlType="ControlType.Button" ControlTypeId="50000" sap2010:WorkflowViewState.IdRef="UIAutoActivity_1" ImageFileName="D:\CSharp\UBot\WorkflowDesigner\RehostedDesigner\bin\Debug\workimage\I’m Feeling Lucky(8).bmp" ImageName="I’m Feeling Lucky" ImageString="iVBORw0KGgoAAAANSUhEUgAAAI8AAAAkCAYAAACwuGm+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM2SURBVHhe7ZxLjtNAEIbnLLkP9lWQkDrXYJfOBeACcQ6AWLBAii0WI4GQkGbBOpm8NGimcLsfdj/i2G0bRPgXn5R2tcvVVV88mk3uvv58oTfvn+nV2xcAOiF8+fLwTHfiw4f7JzqfzwB04tO3J3r9rpRHmBTaAEAbwptKntPpBEAvIA+IBvKAaCAPiAbygGiMPMfjEYBeQB4QDeQB0UAeEM1o8hTLlGazGc3Xcr2ez8p1SsvC39uPNc3LvCK3i35WLHbN6jnpkorA3mEUtExFzXNaB+PDGK/X/TDyHA6HQRRcDoJlcp0xcSBGmbOvPxmxaqicimA8Hrvm6Z5zOBTEK3nG6IeP7HVKvAjHp2BSeeQw/iV5pgTytBJ68+jPJsY5pUKEirKRGVOfSy7K0UGeopnXlUHdr0h5YWKtbx5VW1rWXN9vD18OTeVlTNbAMhOvuSaPH/eFsM/R7Ie1V/dCxM0Z6jOPJdrEbx4/phtr1qoBet08ZM0VeXSzrNy6OWEhPKlb5HHXpkZnbUSaRB6nNufM9V4tmM6j8preXellD/64PJca760tdEMcVAO856rGVrm8vCqXI3GbPObeiwMT9/pxm4HytPanIW5Fo6YSecZuefpgybPf7weR86QqjGUdYuoQCc/Daws11IRT7sXq3B7lEHVeD5XLrst5jltTzikRcZF3nxNPRK5y2KoOO66uGQL7r8SlEAnxvL239d4aq4+qLnGtmbN5fwxCoJuRJ9jY1rxD5LGHG4rbDJPn2jm0PCwLPUddSxJZ34U+9uUm5HGH1keIIfK4cfPtj5LHlVHV4q5ND9Q6JHJAYn1O6zwDuQ15BLphCjuPHoQi0NQoeUqMMCJH+V+ZG6/R8gTQ+5tnKGvglkwC5xyNftji+es6dzPfMEaV579HDWisb/aoaHnavoA9seR5fHwEPdgs1J8CtpLXVvJNxVb+3r+NrjVZbILxGIRAkCeaDS2cP0VjDmccGjUmC9oE98QBeUA0kAdEA3lANJY8u90OgM4IgSAPiALygGggD4gG8oBoLHm22y0AnTHyiB93+nh/DG4CIITwpfpxp/yH/JUnYRIAXRC+fP7+i34D3+7Bk3aJ/aYAAAAASUVORK5CYII=" MouseButton="Left" MouseClickAction="Click" PatternList="Dock=False,ExpandCollapse=False,GridItem=False,Grid=False,Invoke=True,ItemContainer=False,MultipleView=False,RangeValue=False,ScrollItem=False,Scroll=False,Selection=False,SelectionItem=False,SynchronizedInput=False,Table=False,TableItem=False,Text=False,Toggle=False,Transform=False,Value=False,VirtualizedItem=False,Window=False" ProcessName="iexplore" WindowHandle="[hBrowser]" WindowTitle="Google - Internet Explorer">
+      <kaa1:UIAutoActivity.Activities>
+        <scg:List x:TypeArguments="Activity" Capacity="0" />
+      </kaa1:UIAutoActivity.Activities>
+    </kaa1:UIAutoActivity>
+    <sads:DebugSymbol.Symbol>dx5EOlxDU2hhcnBcVUJvdFx0ZXN0XHRlc3QyLnhhbWwGHQMoDgIBAR80H0MCAQIhBSHYAQIBBiIFJhsCAQMhmQEhpQECAQcijBEimBECAQQ=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="OpenBrowserActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="UIAutoActivity_1" sap:VirtualizedContainerService.HintSize="200,134" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="222,320">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ktds.AntBot.Studio.Workflow_1" sap:VirtualizedContainerService.HintSize="262,400" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

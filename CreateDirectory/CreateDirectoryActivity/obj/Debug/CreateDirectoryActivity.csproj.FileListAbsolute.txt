@@ -1,0 +1,12 @@
+D:\CSharp\UBot\CreateDirectory\CreateDirectoryActivity\bin\Debug\CreateDirectoryActivity.dll
+D:\CSharp\UBot\CreateDirectory\CreateDirectoryActivity\bin\Debug\CreateDirectoryActivity.pdb
+D:\CSharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.csproj.CoreCompileInputs.cache
+D:\CSharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.dll
+D:\CSharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.pdb
+D:\CSharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.csprojAssemblyReference.cache
+C:\csharp\UBot\CreateDirectory\CreateDirectoryActivity\bin\Debug\CreateDirectoryActivity.dll
+C:\csharp\UBot\CreateDirectory\CreateDirectoryActivity\bin\Debug\CreateDirectoryActivity.pdb
+C:\csharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.csprojAssemblyReference.cache
+C:\csharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.csproj.CoreCompileInputs.cache
+C:\csharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.dll
+C:\csharp\UBot\CreateDirectory\CreateDirectoryActivity\obj\Debug\CreateDirectoryActivity.pdb

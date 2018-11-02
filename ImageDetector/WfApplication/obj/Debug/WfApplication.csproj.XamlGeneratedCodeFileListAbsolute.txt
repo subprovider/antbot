@@ -1,0 +1,3 @@
+obj\Debug\_WfApplication.g.cs
+obj\Debug\Workflow1.g.cs
+obj\Debug\ktds.UBot_Workflow1_BeforeInitializeComponentHelper.cs

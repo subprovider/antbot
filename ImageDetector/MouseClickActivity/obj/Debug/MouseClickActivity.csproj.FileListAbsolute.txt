@@ -1,0 +1,14 @@
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\bin\Debug\MouseClickActivity.dll
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\bin\Debug\MouseClickActivity.pdb
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity.csprojAssemblyReference.cache
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\Activity1.g.xaml
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity_Activity1_BeforeInitializeComponentHelper.txt
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\_MouseClickActivity.g.cs
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\Activity1.g.cs
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity_Activity1_BeforeInitializeComponentHelper.cs
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity.csproj.XamlGeneratedCodeFileListAbsolute.txt
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity.csproj.XamlGeneratedXamlFileListAbsolute.txt
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity.dll
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity.pdb
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+D:\CSharp\UBot\ImageDetector\MouseClickActivity\obj\Debug\MouseClickActivity.csproj.CoreCompileInputs.cache

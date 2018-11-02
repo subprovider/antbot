@@ -1,0 +1,3 @@
+obj\Debug\_KillProcessActivityLib.g.cs
+obj\Debug\Activity1.g.cs
+obj\Debug\KillProcessActivityLib_Activity1_BeforeInitializeComponentHelper.cs

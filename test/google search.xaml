@@ -1,0 +1,58 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ktds.AntBot.Studio.Workflow" sap2010:WorkflowViewState.IdRef="ktds.AntBot.Studio.Workflow_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:kaa="clr-namespace:ktds.Ant.Activities;assembly=OpenBrowserActivity"
+ xmlns:kaa1="clr-namespace:ktds.Ant.Activities;assembly=UIAutoActivityLib"
+ xmlns:kaa2="clr-namespace:ktds.Ant.Activities;assembly=KeyInActivityLib"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:IntPtr" Name="hIE" />
+    </Sequence.Variables>
+    <kaa:OpenBrowserActivity ResultHandle="{x:Null}" Text="{x:Null}" BrowserType="IE" ContinueOnError="Yes" sap2010:WorkflowViewState.IdRef="OpenBrowserActivity_1" URL="http://google.co.kr" WindowState="Maxmize" />
+    <kaa1:UIAutoActivity ResultBool="{x:Null}" Text="{x:Null}" ActionPattern="" AttrIsList="IsContentElement=True,IsControlElement=True,IsEnabled=True,IsKeyboardFocusable=False,IsOffscreen=False,IsPassword=False" AutomationId="" ControlName="검색" ControlType="ControlType.ComboBox" ControlTypeId="50003" sap2010:WorkflowViewState.IdRef="UIAutoActivity_1" ImageFileName="D:\CSharp\UBot\WorkflowDesigner\RehostedDesigner\bin\Debug\workimage\검색(1).bmp" ImageName="검색" ImageString="iVBORw0KGgoAAAANSUhEUgAAAfkAAAAiCAYAAABcOKC8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVHhe7dUBDQAwEAOh92+6SybjAia4AQBJkgeAKMkDQJTkASBK8gAQJXkAiJI8AERJHgCifvJ3rgeAGskDQJTkASBK8gAQJXkAiJI8AERJHgCiJA8AUZIHgCjJA0CU5AEgSvIAECV5AIiSPABESR4AoiQPAFGSB4AoyQNAlN0BIEryABAleQCIkjwAREkeAKIkDwBRkgeAKMkDQNL2AAQeFZSJN5iRAAAAAElFTkSuQmCC" MouseButton="Left" MouseClickAction="Click" PatternList="Dock=False,ExpandCollapse=False,GridItem=False,Grid=False,Invoke=False,ItemContainer=False,MultipleView=False,RangeValue=False,ScrollItem=False,Scroll=False,Selection=False,SelectionItem=False,SynchronizedInput=False,Table=False,TableItem=False,Text=False,Toggle=False,Transform=False,Value=True,VirtualizedItem=False,Window=False" ProcessName="iexplore" WindowHandle="[hIE]" WindowTitle="Google - Internet Explorer">
+      <kaa1:UIAutoActivity.Activities>
+        <scg:List x:TypeArguments="Activity" Capacity="0" />
+      </kaa1:UIAutoActivity.Activities>
+    </kaa1:UIAutoActivity>
+    <kaa2:KeyInActivity ResultBool="{x:Null}" Text="{x:Null}" DelayMiliSec="0" sap2010:WorkflowViewState.IdRef="KeyInActivity_1" KeyInText="WorkflowApplicationCompletedEventArgs console output [^enter^]" />
+    <sads:DebugSymbol.Symbol>dyZEOlxDU2hhcnBcVUJvdFx0ZXN0XGdvb2dsZSBzZWFyY2gueGFtbAUeAyoOAgEBIgUi1wECAQYjBScbAgEDKAUozwECAQIj7Qkj9AkCAQQ=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="OpenBrowserActivity_1" sap:VirtualizedContainerService.HintSize="521,22" />
+      <sap2010:ViewStateData Id="UIAutoActivity_1" sap:VirtualizedContainerService.HintSize="521,132" />
+      <sap2010:ViewStateData Id="KeyInActivity_1" sap:VirtualizedContainerService.HintSize="521,57" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="543,415">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ktds.AntBot.Studio.Workflow_1" sap:VirtualizedContainerService.HintSize="583,495" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

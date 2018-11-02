@@ -1,0 +1,46 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ktds.AntBot.Studio.Workflow" sap2010:WorkflowViewState.IdRef="ktds.AntBot.Studio.Workflow_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:kuai="clr-namespace:ktds.UBot.Activities.ImageDetector;assembly=ImageDetectorActivity"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
+    <kuai:ImageDetectorActivity DetectPosition="{x:Null}" Text="{x:Null}" ActionType="None" Capacity="95" ClickPosition="0, 0" DisplayName="New Button" sap2010:WorkflowViewState.IdRef="ImageDetectorActivity_3" ImageFileName="D:\CSharp\UBot\ImageDetector\ImageDetector\Image\New.bmp" Retry="1" />
+    <kuai:ImageDetectorActivity DetectPosition="{x:Null}" Text="{x:Null}" ActionType="None" Capacity="95" ClickPosition="0, 0" DisplayName="Open Button" sap2010:WorkflowViewState.IdRef="ImageDetectorActivity_4" ImageFileName="D:\CSharp\UBot\ImageDetector\ImageDetector\Image\Open.jpg" Retry="1" />
+    <sads:DebugSymbol.Symbol>dyJEOlxDU2hhcnBcVUJvdFx0ZXN0V0ZcdGVzdFdmMS54YW1sAwoDEQ4CAQEOBQ6oAgIBAw8FD6oCAgEC</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="ImageDetectorActivity_3" sap:VirtualizedContainerService.HintSize="200,127">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ImageDetectorActivity_4" sap:VirtualizedContainerService.HintSize="200,116">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="222,407">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ktds.AntBot.Studio.Workflow_1" sap:VirtualizedContainerService.HintSize="262,487" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

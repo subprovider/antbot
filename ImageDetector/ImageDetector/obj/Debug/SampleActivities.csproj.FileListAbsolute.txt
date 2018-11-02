@@ -1,0 +1,5 @@
+D:\wf_wcf_sample\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility\cs\SampleActivities\bin\Debug\SampleActivities.dll
+D:\wf_wcf_sample\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility\cs\SampleActivities\bin\Debug\SampleActivities.pdb
+D:\wf_wcf_sample\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility\cs\SampleActivities\obj\Debug\SampleActivities.csproj.CoreCompileInputs.cache
+D:\wf_wcf_sample\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility\cs\SampleActivities\obj\Debug\SampleActivities.dll
+D:\wf_wcf_sample\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility\cs\SampleActivities\obj\Debug\SampleActivities.pdb

@@ -1,0 +1,3 @@
+obj\Debug\_TestActivityLib.g.cs
+obj\Debug\Activity1.g.cs
+obj\Debug\TestActivityLib_Activity1_BeforeInitializeComponentHelper.cs

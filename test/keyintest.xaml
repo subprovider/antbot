@@ -1,0 +1,66 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ktds.AntBot.Studio.Workflow" sap2010:WorkflowViewState.IdRef="ktds.AntBot.Studio.Workflow_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:kua="clr-namespace:ktds.UBot.Activities;assembly=KeyInActivityLib"
+ xmlns:kuai="clr-namespace:ktds.UBot.Activities.ImageDetector;assembly=ImageDetectorActivity"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="ResultBool" />
+    </Sequence.Variables>
+    <kuai:ImageDetectorActivity OutImagePosHeight="{x:Null}" OutImagePosLeft="{x:Null}" OutImagePosTop="{x:Null}" OutImagePosWidth="{x:Null}" Text="{x:Null}" ActionType="LButtonClick" Capacity="85" ContinueOnError="No" DelayAfter="1000" sap2010:WorkflowViewState.IdRef="ImageDetectorActivity_1" ImageFileName="D:\CSharp\UBot\test\XXX.bmp" OffsetX="69" OffsetY="87" ResultBool="[ResultBool]" Retry="1" />
+    <If Condition="[ResultBool]" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <kua:KeyInActivity ResultBool="{x:Null}" Text="{x:Null}" DelayMiliSec="0" sap2010:WorkflowViewState.IdRef="KeyInActivity_1" KeyInText="호호호123&lt;&gt;DKDKDKdkdkdk" />
+      </If.Then>
+      <If.Else>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Error" />
+      </If.Else>
+    </If>
+    <sads:DebugSymbol.Symbol>dyJEOlxDU2hhcnBcVUJvdFx0ZXN0XGtleWludGVzdC54YW1sCRwDKg4CAQEeNR48AgECIAUglAMCAQkhBSgKAgEDIPkCIIcDAgEKIRMhIQIBBCMJI64BAgEIJgkmUQIBBiZHJk4CAQc=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="ImageDetectorActivity_1" sap:VirtualizedContainerService.HintSize="464,228">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="KeyInActivity_1" sap:VirtualizedContainerService.HintSize="200,57" />
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="211,61" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,209" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="486,601">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ktds.AntBot.Studio.Workflow_1" sap:VirtualizedContainerService.HintSize="526,681" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
